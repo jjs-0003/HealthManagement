@@ -11,7 +11,6 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-import sun.misc.Perf.GetPerfAction;
 import jp.co.jjs.java_seminar.beans.MyHealth;
 
 public class HealthSearchDAO {
@@ -29,7 +28,7 @@ public class HealthSearchDAO {
         }
     }
 
-    public ArrayList<MyHealth> getHealth() {
+    public ArrayList<MyHealth> getHealth(double maxweight, double minweight, double weight) {
         ArrayList<MyHealth> health = new ArrayList<>();
         try (Connection con = ds.getConnection();
 
@@ -38,7 +37,9 @@ public class HealthSearchDAO {
                 PreparedStatement ps = con
                         .prepareStatement("SELECT * FROM HEALTH WHERE ? BETWEEN ? AND ?")) {
 
-            ps.setString(1,);
+            ps.setString(1,"weight");
+            ps.setString(2,"minweight");
+            ps.setString(3,"maxweight");
 
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {

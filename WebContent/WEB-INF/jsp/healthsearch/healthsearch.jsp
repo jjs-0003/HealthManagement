@@ -9,7 +9,7 @@
     <body>
 
     <form action="HealthSearchServlet" method="post">
-    <input type="radio" name="radio" value="date" checked="checked"/>日付
+    <input type="radio" name="radio" value="date"/>日付
     <select name="month1" size="1">
     <option value="">--</option>
     <option value="1">1月</option>

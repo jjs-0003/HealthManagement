@@ -98,4 +98,13 @@ public class MyHealth {
         this.sleepTime = sleepTime;
     }
 
+    @Override
+    public String toString() {
+        return "MyHealth [id=" + id + ", date=" + date + ", height=" + height
+                + ", weight=" + weight + ", bmi=" + bmi + ", sleepTime="
+                + sleepTime + "]";
+    }
+
+
+
 }

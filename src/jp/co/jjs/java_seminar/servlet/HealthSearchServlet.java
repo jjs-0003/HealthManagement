@@ -3,6 +3,7 @@ package jp.co.jjs.java_seminar.servlet;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -43,16 +44,31 @@ public class HealthSearchServlet extends HttpServlet {
 
 	private void process(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
 
+	    request.setCharacterEncoding("UTF-8");
+	    response.setContentType("text/html;charset=UTF-8");
+
 
 	   String minweight = request.getParameter("minweight");
+	   String maxweight = request.getParameter("maxweight");
+	   String radio = request.getParameter("radio");
 
-	    System.out.println(minweight);
+	   System.out.println(minweight);
+	   System.out.println(maxweight);
+	   System.out.println(radio);
 
 
         ArrayList<MyHealth> healthlist = new ArrayList<>();
         HealthManagementDAO dao = new HealthManagementDAO();
 
         healthlist = dao.getHealth();
+
+        request.setAttribute("healthlist" , healthlist);
+
+        System.out.println(healthlist);
+
+        RequestDispatcher dispacher = request
+                .getRequestDispatcher("WEB-INF/jsp/HealthSearchResult.jsp");
+         dispacher.forward(request, response);
 
 
 	}
