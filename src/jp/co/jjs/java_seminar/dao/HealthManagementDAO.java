@@ -28,11 +28,13 @@ public class HealthManagementDAO {
         }
     }
 
+    //データベースに入っているデータをArrayListに入れて
+    //返すメソッドです。
     public ArrayList<MyHealth> getHealth() {
         ArrayList<MyHealth> health = new ArrayList<>();
         try (Connection con = ds.getConnection();
                 PreparedStatement ps = con
-                        .prepareStatement("SELECT * FROM Health")) {
+                        .prepareStatement("SELECT * FROM HEALTH")) {
 
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
