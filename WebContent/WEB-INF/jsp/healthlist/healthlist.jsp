@@ -5,30 +5,39 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>一覧</title>
 </head>
 <body>
     <center>
-    <form action="HealthListJumpServlet" method="POST">
-        <c:out value="${message}"></c:out>
-        <table class="table">
-            <select name="example5" size="5" >
-                <c:forEach var="health" items="${healthlist}">
-                    <tr>
-                       <option value="サンプル1"> <td>${health.id}</td>
-                        <td>${health.date}</td>
-                        <td>${health.height}</td>
-                        <td>${health.weight}</td>
-                        <td>${health.bmi}</td>
-                        <td>${health.sleepTime}</td>
-                        </option>
-                    </tr>
-                </c:forEach>
-            </select>
-        </table>
-        <input type="submit" value="変更"> <input type="submit"
-            value="削除">
-    </form>
+        <h1>一覧</h1>
+
+        <form action="HealthListJumpServlet" method="POST">
+            <c:out value="${message}"></c:out>
+
+            <select name="health" size="5">
+
+                <table class="table">
+
+                    <c:forEach var="health" items="${healthlist}">
+                        <tr>
+
+                            <option value="${health.id}">
+                            <td>${health.id}</td>
+                            <td>${health.date}</td>
+                            <td>${health.height}</td>
+                            <td>${health.weight}</td>
+                            <td>${health.bmi}</td>
+                            <td>${health.sleepTime}</td>
+                            </option>
+
+                        </tr>
+                    </c:forEach>
+
+                </table>
+            </select> <br>
+            <input name="listjump" type="submit" value="変更">
+            <input name="listjump" type="submit" value="削除">
+        </form>
     </center>
 </body>
 </html>
