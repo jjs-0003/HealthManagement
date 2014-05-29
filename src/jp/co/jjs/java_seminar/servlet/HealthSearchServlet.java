@@ -2,7 +2,6 @@ package jp.co.jjs.java_seminar.servlet;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,16 +9,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class HealthJumpServlet
+ * Servlet implementation class HealthSearchServlet
  */
-@WebServlet("/HealthJumpServlet")
-public class HealthJumpServlet extends HttpServlet {
+@WebServlet("/HealthSearchServlet")
+public class HealthSearchServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public HealthJumpServlet() {
+    public HealthSearchServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,7 +27,6 @@ public class HealthJumpServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 	    process(request, response);
 	}
 
@@ -36,38 +34,13 @@ public class HealthJumpServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 	    process(request, response);
 	}
 
 	private void process(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
 
-	    request.setCharacterEncoding("UTF-8");
-	    response.setContentType("text/html;charset=UTF-8");
-
-
-	    String button = request.getParameter("button");
-
-	    switch (button) {
-        case "一覧":
-
-            break;
-        case "記録":
-
-            break;
-        case "検索":
-
-            RequestDispatcher dispacher = request
-            .getRequestDispatcher("WEB-INF/jsp/healthsearch/healthsearch.jsp");
-            dispacher.forward(request, response);
-
-            break;
-        case "BMI計算":
-
-            break;
-        default:
-            break;
-        }
+        request.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
 
 
 	}
