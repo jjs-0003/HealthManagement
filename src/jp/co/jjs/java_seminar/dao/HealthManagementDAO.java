@@ -55,4 +55,30 @@ public class HealthManagementDAO {
         return health;
     }
 
+    //テーブルの中から指定したIDのレコードを返す
+    public MyHealth getRecord(int id){
+
+        MyHealth myhealth = new MyHealth();
+
+        try (Connection con = ds.getConnection();
+                PreparedStatement ps = con
+                        .prepareStatement("SELECT * FROM HEALTH WHERE ID LIKE" + id +"")) {
+
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+
+                    myhealth.setId(rs.getInt("id"));
+                    myhealth.setDate(rs.getString("date"));
+                    myhealth.setHeight(rs.getDouble("height"));
+                    myhealth.setWeight(rs.getDouble("weight"));
+                    myhealth.setBmi(rs.getDouble("bmi"));
+                    myhealth.setSleepTime(rs.getDouble("sleeptime"));
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return myhealth;
+    }
 }
