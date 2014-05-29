@@ -60,7 +60,6 @@ public class HealthListJumpServlet extends HttpServlet {
         HealthManagementDAO dao = new HealthManagementDAO();
 
         health = dao.getRecord(listId);
-
         session.setAttribute("healthRecord", health);
 
         if(jump.equals("削除")){

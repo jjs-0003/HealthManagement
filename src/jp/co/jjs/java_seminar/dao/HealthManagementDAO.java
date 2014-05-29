@@ -62,7 +62,7 @@ public class HealthManagementDAO {
 
         try (Connection con = ds.getConnection();
                 PreparedStatement ps = con
-                        .prepareStatement("SELECT * FROM HEALTH WHERE ID LIKE" + id +"")) {
+                        .prepareStatement("SELECT * FROM HEALTH WHERE ID=" + id)) {
 
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
