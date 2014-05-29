@@ -1,12 +1,16 @@
 package jp.co.jjs.java_seminar.servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import jp.co.jjs.java_seminar.beans.MyHealth;
+import jp.co.jjs.java_seminar.dao.HealthManagementDAO;
 
 /**
  * Servlet implementation class HealthSearchServlet
@@ -39,8 +43,16 @@ public class HealthSearchServlet extends HttpServlet {
 
 	private void process(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
 
-        request.setCharacterEncoding("UTF-8");
-        response.setContentType("text/html;charset=UTF-8");
+
+	   String minweight = request.getParameter("minweight");
+
+	    System.out.println(minweight);
+
+
+        ArrayList<MyHealth> healthlist = new ArrayList<>();
+        HealthManagementDAO dao = new HealthManagementDAO();
+
+        healthlist = dao.getHealth();
 
 
 	}

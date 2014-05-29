@@ -9,21 +9,21 @@
     <body>
 
     <form action="HealthSearchServlet" method="post">
-    <input type="radio" name="day" checked="checked"/>日付
+    <input type="radio" name="radio" value="date" checked="checked"/>日付
     <select name="month1" size="1">
     <option value="">--</option>
-    <option value="1月">1月</option>
-    <option value="2月">2月</option>
-    <option value="3月">3月</option>
-    <option value="4月">4月</option>
-    <option value="5月">5月</option>
-    <option value="6月">6月</option>
-    <option value="7月">7月</option>
-    <option value="8月">8月</option>
-    <option value="9月">9月</option>
-    <option value="10月">10月</option>
-    <option value="11月">11月</option>
-    <option value="12月">12月</option>
+    <option value="1">1月</option>
+    <option value="2">2月</option>
+    <option value="3">3月</option>
+    <option value="4">4月</option>
+    <option value="5">5月</option>
+    <option value="6">6月</option>
+    <option value="7">7月</option>
+    <option value="8">8月</option>
+    <option value="9">9月</option>
+    <option value="10">10月</option>
+    <option value="11">11月</option>
+    <option value="12">12月</option>
     </select>月
 
     <select name="day1">
@@ -64,18 +64,18 @@
 
     <select name="month2" size="1">
     <option value="">--</option>
-    <option value="1月">1月</option>
-    <option value="2月">2月</option>
-    <option value="3月">3月</option>
-    <option value="4月">4月</option>
-    <option value="5月">5月</option>
-    <option value="6月">6月</option>
-    <option value="7月">7月</option>
-    <option value="8月">8月</option>
-    <option value="9月">9月</option>
-    <option value="10月">10月</option>
-    <option value="11月">11月</option>
-    <option value="12月">12月</option>
+    <option value="1">1月</option>
+    <option value="2">2月</option>
+    <option value="3">3月</option>
+    <option value="4">4月</option>
+    <option value="5">5月</option>
+    <option value="6">6月</option>
+    <option value="7">7月</option>
+    <option value="8">8月</option>
+    <option value="9">9月</option>
+    <option value="10">10月</option>
+    <option value="11">11月</option>
+    <option value="12">12月</option>
     </select>月
 
     <select name="day2">
@@ -117,7 +117,7 @@
     <br>
     <br>
 
-	<input type="radio" name="weight"/>体重
+	<input type="radio" name="radio" value="weight"/>体重
     <select name="minweight" size="1">
     <option value="">--</option>
     <option value="30">30</option>
@@ -151,7 +151,7 @@
     <br>
     <br>
 
-    <input type="radio" name="sleeptime" />睡眠時間
+    <input type="radio" name="radio" value="sleeptime" />睡眠時間
     <select name="sleeptime" size="1">
     <option value="">--</option>
     <option value="1">1</option>
@@ -184,7 +184,7 @@
     <br>
     <br>
 
-    <input type="radio" name="bmi" />BMI
+    <input type="radio" name="radio" value="bmi" />BMI
     <select name="minbmi">
     <option value="">--</option>
     <option value="0">0</option>
