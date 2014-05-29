@@ -10,7 +10,7 @@
 
     <form action="HealthSerchServlet" method="post">
     <input type="radio" checked="checked"/>日付
-    <select name="start" size="1">
+    <select name="month" size="1">
     <option value="1月">1月</option>
     <option value="2月">2月</option>
     <option value="3月">3月</option>
@@ -25,7 +25,7 @@
     <option value="12月">12月</option>
     </select>～
 
-    <select name="end" size="1">
+    <select name="day" size="1">
     <option value="1月">1月</option>
     <option value="2月">2月</option>
     <option value="3月">3月</option>
