@@ -2,6 +2,7 @@ package jp.co.jjs.java_seminar.servlet;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -47,8 +48,6 @@ public class HealthJumpServlet extends HttpServlet {
 
 	    String button = request.getParameter("button");
 
-	    System.out.println(button);
-
 	    switch (button) {
         case "一覧":
 
@@ -57,6 +56,10 @@ public class HealthJumpServlet extends HttpServlet {
 
             break;
         case "検索":
+
+            RequestDispatcher dispacher = request
+            .getRequestDispatcher("WEB-INF/jsp/healthsearch/healthsearch.jsp");
+            dispacher.forward(request, response);
 
             break;
         case "BMI計算":
