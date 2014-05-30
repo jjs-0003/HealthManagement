@@ -61,6 +61,7 @@ public class HealthListJumpServlet extends HttpServlet {
 
         health = dao.getRecord(listId);
         session.setAttribute("healthRecord", health);
+        session.setAttribute("beforeId", listId);
 
         if(jump.equals("削除")){
             forward = "/WEB-INF/jsp/healthdelete/healthdelete.jsp";
