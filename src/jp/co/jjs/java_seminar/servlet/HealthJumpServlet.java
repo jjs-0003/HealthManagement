@@ -2,6 +2,7 @@ package jp.co.jjs.java_seminar.servlet;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -54,7 +55,9 @@ public class HealthJumpServlet extends HttpServlet {
 
             break;
         case "記録":
-
+            RequestDispatcher dipatcher = request
+            .getRequestDispatcher("/HealthInsertServlet");
+            dipatcher.forward(request, response);
             break;
         case "検索":
 
