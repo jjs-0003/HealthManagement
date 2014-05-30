@@ -8,18 +8,22 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import jp.co.jjs.java_seminar.beans.MyHealth;
+import jp.co.jjs.java_seminar.dao.HealthUpdateDAO;
 
 /**
- * Servlet implementation class HealthJumpServlet
+ * Servlet implementation class HealthUpdateCompleteServlet
  */
-@WebServlet("/HealthJumpServlet")
-public class HealthJumpServlet extends HttpServlet {
+@WebServlet("/HealthUpdateCompleteServlet")
+public class HealthUpdateCompleteServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public HealthJumpServlet() {
+    public HealthUpdateCompleteServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,7 +34,6 @@ public class HealthJumpServlet extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
-
         process(request, response);
     }
 
@@ -40,39 +43,33 @@ public class HealthJumpServlet extends HttpServlet {
      */
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
-
         process(request, response);
     }
 
     private void process(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
 
-        request.setCharacterEncoding("UTF-8");
-        response.setContentType("text/html;charset=UTF-8");
+        HttpSession session = request.getSession();
 
-        String button = request.getParameter("button");
-        String forward = "";
+        MyHealth healthUp = new MyHealth();
+        healthUp = (MyHealth) session.getAttribute("healthUp");
 
-        switch (button) {
-        case "一覧":
-            forward = "WEB-INF/jsp/healthlist/healthlist.jsp";
-            break;
-        case "記録":
+        String updateJump = request.getParameter("updateJump");
+        String forward = "/WEB-INF/jsp/healthupdate/healthupdate.jsp";
 
-            break;
-        case "検索":
-            forward = "WEB-INF/jsp/healthsearch/healthsearch.jsp";
-            break;
-        case "BMI計算":
+        if (updateJump.equals("変更")) {
+            int id = (int) session.getAttribute("beforeId");
 
-            break;
-        default:
-            break;
+            HealthUpdateDAO healthupdate = new HealthUpdateDAO();
+
+            System.out.println(id);
+
+            healthupdate.tableUpdate(healthUp, id);
+
+            forward = "/WEB-INF/jsp/healthupdate/healthupdatecomp.jsp";
         }
 
-        RequestDispatcher dispacher = request.getRequestDispatcher(forward);
-        dispacher.forward(request, response);
-
+        RequestDispatcher dispatcher = request.getRequestDispatcher(forward);
+        dispatcher.forward(request, response);
     }
-
 }

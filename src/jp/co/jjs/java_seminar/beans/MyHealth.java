@@ -1,6 +1,8 @@
 package jp.co.jjs.java_seminar.beans;
 
-public class MyHealth {
+import java.io.Serializable;
+
+public class MyHealth implements Serializable{
     private int id;
     private String date;
     private double height;
