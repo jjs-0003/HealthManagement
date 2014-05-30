@@ -58,7 +58,7 @@ public class HealthJumpServlet extends HttpServlet {
             forward = "HealthListServlet";
             break;
         case "記録":
-            forward = "InsertServlet";
+            forward = "HealthInsertServlet";
 
             break;
         case "検索":
