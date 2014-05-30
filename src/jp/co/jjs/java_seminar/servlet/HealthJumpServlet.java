@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/HealthJumpServlet")
 public class HealthJumpServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
@@ -24,43 +24,44 @@ public class HealthJumpServlet extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    /**
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+     *      response)
+     */
+    protected void doGet(HttpServletRequest request,
+            HttpServletResponse response) throws ServletException, IOException {
 
-	    process(request, response);
-	}
+        process(request, response);
+    }
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    /**
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+     *      response)
+     */
+    protected void doPost(HttpServletRequest request,
+            HttpServletResponse response) throws ServletException, IOException {
 
-	    process(request, response);
-	}
+        process(request, response);
+    }
 
-	private void process(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+    private void process(HttpServletRequest request,
+            HttpServletResponse response) throws ServletException, IOException {
 
-	    request.setCharacterEncoding("UTF-8");
-	    response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
 
+        String button = request.getParameter("button");
+        String forward = "";
 
-	    String button = request.getParameter("button");
-
-	    switch (button) {
+        switch (button) {
         case "一覧":
-
+            forward = "WEB-INF/jsp/healthlist/healthlist.jsp";
             break;
         case "記録":
 
             break;
         case "検索":
-
-            RequestDispatcher dispacher = request
-            .getRequestDispatcher("WEB-INF/jsp/healthsearch/healthsearch.jsp");
-            dispacher.forward(request, response);
-
+            forward = "WEB-INF/jsp/healthsearch/healthsearch.jsp";
             break;
         case "BMI計算":
 
@@ -69,7 +70,9 @@ public class HealthJumpServlet extends HttpServlet {
             break;
         }
 
+        RequestDispatcher dispacher = request.getRequestDispatcher(forward);
+        dispacher.forward(request, response);
 
-	}
+    }
 
 }
