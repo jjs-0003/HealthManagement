@@ -17,6 +17,9 @@
             <br> 睡眠時間 ${healthUp.sleepTime}<br>
             <input name="updatejump" type="submit" value="一覧へ戻る">
         </form>
+        <br>
+    <br>
+    <a href="HealthServlet">メニューに戻る</a>;
     </center>
 </body>
 </html>

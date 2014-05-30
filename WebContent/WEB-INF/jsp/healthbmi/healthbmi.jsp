@@ -35,6 +35,9 @@
             <input type="submit" value="計算" />
 
     </form>
+    <br>
+    <br>
+    <a href="HealthServlet">メニューに戻る</a>;
     </center>
     </body>
 </html>

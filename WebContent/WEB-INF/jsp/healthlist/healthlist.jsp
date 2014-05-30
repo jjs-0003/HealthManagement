@@ -37,6 +37,9 @@
             </select> <br> <input name="listjump" type="submit" value="変更">
             <input name="listjump" type="submit" value="削除">
         </form>
+        <br>
+    <br>
+    <a href="HealthServlet">メニューに戻る</a>;
     </center>
 </body>
 </html>

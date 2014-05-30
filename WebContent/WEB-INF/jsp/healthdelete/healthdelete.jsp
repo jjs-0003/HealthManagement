@@ -20,6 +20,9 @@
             <input name="updatejump" type="submit" value="削除">
             <input name="updatejump" type="submit" value="一覧へ戻る">
         </form>
+        <br>
+    <br>
+    <a href="HealthServlet">メニューに戻る</a>;
     </center>
 </body>
 </html>
