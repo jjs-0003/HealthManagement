@@ -50,7 +50,7 @@ public class HealthDeleteServlet extends HttpServlet {
 
         int id = (int)session.getAttribute("beforeId");
         String jump = request.getParameter("updatejump");
-        String forward = "/WEB-INF/jsp/healthdeletecomp/healthdeletecomp.jsp";
+        String forward = "/WEB-INF/jsp/healthdelete/healthdeletecomp.jsp";
 
         dao.recordDelete(id);
 

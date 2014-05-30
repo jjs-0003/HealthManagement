@@ -27,7 +27,7 @@ public class HealthDeleteDAO {
 
         try (Connection con = ds.getConnection();
                 PreparedStatement ps = con
-                        .prepareStatement("DELETE FROM TEST WHERE ID="+id)) {
+                        .prepareStatement("DELETE FROM HEALTH WHERE ID="+id)) {
             ps.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
