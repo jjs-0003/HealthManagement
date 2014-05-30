@@ -21,6 +21,9 @@
             <br> <input name="updateJump" type="submit" value="変更">
             <input name="updateJump" type="submit" value="キャンセル">
         </form>
+        <br>
+    <br>
+    <a href="HealthServlet">メニューに戻る</a>;
     </center>
 </body>
 </html>

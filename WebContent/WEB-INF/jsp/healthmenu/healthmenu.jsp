@@ -19,6 +19,7 @@
             type="submit" name="button" value="BMI計算">
 
     </form>
+
     </center>
 </body>
 </html>

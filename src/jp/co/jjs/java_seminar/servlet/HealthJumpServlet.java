@@ -58,9 +58,8 @@ public class HealthJumpServlet extends HttpServlet {
             forward = "HealthListServlet";
             break;
         case "記録":
-            RequestDispatcher dipatcher = request
-            .getRequestDispatcher("/HealthInsertServlet");
-            dipatcher.forward(request, response);
+            forward = "HealthInsertServlet";
+
             break;
         case "検索":
             forward = "WEB-INF/jsp/healthsearch/healthsearch.jsp";

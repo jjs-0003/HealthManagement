@@ -8,6 +8,7 @@
         <title>検索結果</title>
     </head>
     <body>
+    <center>
     <h1>検索結果</h1>
     検索結果は次の通りです。<br>
     <table  name="health" border="3">
@@ -32,5 +33,9 @@
             </c:forEach>
         </table>
     </table>
+    <br>
+    <br>
+    <a href="HealthServlet">メニューに戻る</a>;
+    </center>
     </body>
 </html>

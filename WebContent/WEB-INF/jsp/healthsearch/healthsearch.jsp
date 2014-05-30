@@ -205,6 +205,9 @@
         </select> <br> <br> <input type="submit" value="検索">
 
     </form>
+    <br>
+    <br>
+    <a href="HealthServlet">メニューに戻る</a>;
     </center>
 </body>
 </html>
