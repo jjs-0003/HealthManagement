@@ -64,6 +64,7 @@ public class HealthJumpServlet extends HttpServlet {
             forward = "WEB-INF/jsp/healthsearch/healthsearch.jsp";
             break;
         case "BMI計算":
+            forward = "WEB-INF/jsp/healthbmi/healthbmi.jsp";
 
             break;
         default:
