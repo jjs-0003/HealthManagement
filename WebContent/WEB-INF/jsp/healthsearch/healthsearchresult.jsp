@@ -29,7 +29,7 @@
         <td>${health.sleepTime}</td>
         </tr>
         </option>
-    </table>
+        </table>
        </c:forEach>
                     </table>
     </body>
