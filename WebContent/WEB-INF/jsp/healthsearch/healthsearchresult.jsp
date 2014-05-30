@@ -11,26 +11,25 @@
 
     <table  name="health" border="3">
         <table class="table">
-        <c:forEach var="health" items="${healthlist}">
-        <option value="${health.id}">
-
-        <tr>
-        <th>ID</th>
-        <th>身長</th>
-        <th>体重</th>
-        <th>BMI</th>
-        <th>睡眠時間</th>
-        </tr>
-        <tr>
-        <td>${health.date}</td>
-        <td>${health.height}</td>
-        <td>${health.weight}</td>
-        <td>${health.bmi}</td>
-        <td>${health.sleepTime}</td>
-        </tr>
-        </option>
+                <tr>
+                <th>ID</th>
+                <th>身長</th>
+                <th>体重</th>
+                <th>BMI</th>
+                <th>睡眠時間</th>
+                </tr>
+                <tr>
+                <c:forEach var="health" items="${healthlist}">
+                <option value="${health.id}">
+                <td>${health.date}</td>
+                <td>${health.height}</td>
+                <td>${health.weight}</td>
+                <td>${health.bmi}</td>
+                <td>${health.sleepTime}</td>
+                </tr>
+                </option>
+            </c:forEach>
         </table>
-       </c:forEach>
-                    </table>
+    </table>
     </body>
 </html>
