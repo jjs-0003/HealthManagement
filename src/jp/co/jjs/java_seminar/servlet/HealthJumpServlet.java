@@ -55,7 +55,7 @@ public class HealthJumpServlet extends HttpServlet {
 
         switch (button) {
         case "一覧":
-            forward = "WEB-INF/jsp/healthlist/healthlist.jsp";
+            forward = "HealthListServlet";
             break;
         case "記録":
 
