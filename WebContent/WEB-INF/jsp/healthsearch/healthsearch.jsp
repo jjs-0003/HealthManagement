@@ -9,7 +9,7 @@
 <body>
 <center>
     <h1>データ検索</h1><br>
-    記録されているデータを検索します。<br>
+    記録されているデータを検索します。<br><br>
     <form action="HealthSearchServlet" method="post">
         <input type="radio" name="radio" value="date" />日付 <select
             name="month1" size="1">

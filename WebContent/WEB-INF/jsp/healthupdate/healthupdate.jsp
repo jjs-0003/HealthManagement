@@ -11,7 +11,7 @@
     <center>
         <h1>変更</h1><br>
         変更したい情報を変更し、変更確認を押してください。<br>
-        戻る場合は、一覧へ戻るを押してください。<br>
+        戻る場合は、一覧へ戻るを押してください。<br><br>
         <form action="HealthUpdateComfirmServlet" method="post">
             管理ID        <input name="healthRecodeComfId" type="text" value="${healthRecord.id}"><br><br>
             身長          <input name="healthRecodeComfHeight" type="text" value="${healthRecord.height}"><br><br>

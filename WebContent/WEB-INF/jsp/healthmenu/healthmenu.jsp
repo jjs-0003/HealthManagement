@@ -10,7 +10,7 @@
     <center>
     <h1>健康管理</h1>
     <br>
-    体重、身長、BMI、睡眠時間を管理できます。<br>
+    体重、身長、BMI、睡眠時間を管理できます。<br><br>
     <form action="HealthJumpServlet" method="post">
 
         <input type="submit" name="button" value="一覧"> <input
