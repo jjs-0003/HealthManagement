@@ -12,6 +12,7 @@
     <center>
         <h1>変更完了</h1>
         <br>
+        以下の情報で変更しました。<br>
         <form action="HealthListServlet" method="post">
             管理ID ${healthUp.id}<br>
             <br> 身長 ${healthUp.height}<br>

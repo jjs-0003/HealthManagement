@@ -11,6 +11,7 @@
 <body>
  <center>
         <h1>削除確認</h1><br>
+        以下の情報を削除します。削除するのであれば削除を押してください。<br>
         <form action="HealthDeleteServlet" method="post">
            管理ID        ${healthUp.id}<br><br>
            身長          ${healthUp.height}<br><br>

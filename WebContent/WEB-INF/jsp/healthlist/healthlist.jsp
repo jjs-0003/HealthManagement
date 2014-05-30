@@ -12,16 +12,18 @@
         <h1>一覧</h1>
 
         <form action="HealthListJumpServlet" method="POST">
-            <c:out value="${message}"></c:out>
-
-            <select name="health" size="5">
 
                 <table class="table">
 
-                    <c:forEach var="health" items="${healthlist}">
+                    <c:forEach var="healthh" items="${healthlist}">
                         <tr>
-
-                            <option value="${health.id}">
+                            <c:set value="${healthh.id}" />
+                            <c:if test="${value == 1}">
+                            <input type="radio" name="health" value="${health.id}" checked="checked">
+                            </c:if>
+                            <c:if test="${value > 1}">
+                            <input type"=radio" name="health" value="${health.id}">
+                            </c:if>
                             <td>${health.id}</td>
                             <td>${health.date}</td>
                             <td>${health.height}</td>
@@ -34,7 +36,7 @@
                     </c:forEach>
 
                 </table>
-            </select> <br>
+             <br>
             <input name="listjump" type="submit" value="変更">
             <input name="listjump" type="submit" value="削除">
         </form>
