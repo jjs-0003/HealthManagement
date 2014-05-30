@@ -8,7 +8,8 @@
         <title>検索結果</title>
     </head>
     <body>
-
+    <h1>検索結果</h1>
+    検索結果は次の通りです。<br>
     <table  name="health" border="3">
         <table class="table">
                 <tr>

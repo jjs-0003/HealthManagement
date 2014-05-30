@@ -9,6 +9,7 @@
 <body>
     <center>
         <h1>削除完了</h1>
+        以下の情報を削除しました。<br><br>
         <form action="HealthListServlet" method="post">
             管理ID ${healthUp.id}<br>
             <br> 身長 ${healthUp.height}<br>

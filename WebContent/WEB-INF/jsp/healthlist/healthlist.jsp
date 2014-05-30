@@ -34,8 +34,7 @@
                     </c:forEach>
 
                 </table>
-            </select> <br>
-            <input name="listjump" type="submit" value="変更">
+            </select> <br> <input name="listjump" type="submit" value="変更">
             <input name="listjump" type="submit" value="削除">
         </form>
     </center>
