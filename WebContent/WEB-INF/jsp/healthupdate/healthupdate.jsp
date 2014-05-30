@@ -10,11 +10,11 @@
 <body>
     <center>
         <h1>変更</h1><br>
-        <form action="HealthUpdateConfirmServlet" method="post">
-            管理ID        <input name="healthRecodeUpdateId" type="text" value="${healthRecord.id}"><br><br>
-            身長          <input name="healthRecodeUpdateHeight" type="text" value="${healthRecord.height}"><br><br>
-            体重          <input name="healthRecodeUpdateWeight" type="text" value="${healthRecord.weight}"><br><br>
-            睡眠時間      <input name="healthRecodeUpdateSleepTime" type="text" value="${healthRecord.sleepTime}"><br><br>
+        <form action="HealthUpdateComfirmServlet" method="post">
+            管理ID        <input name="healthRecodeComfId" type="text" value="${healthRecord.id}"><br><br>
+            身長          <input name="healthRecodeComfHeight" type="text" value="${healthRecord.height}"><br><br>
+            体重          <input name="healthRecodeComfWeight" type="text" value="${healthRecord.weight}"><br><br>
+            睡眠時間      <input name="healthRecodeComfSleepTime" type="text" value="${healthRecord.sleepTime}"><br><br>
             <input name="updatejump" type="submit" value="変更確認">
             <input name="updatejump" type="submit" value="一覧へ戻る">
         </form>
